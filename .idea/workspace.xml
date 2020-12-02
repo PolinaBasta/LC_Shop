@@ -3,15 +3,41 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test/specs/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/basic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/random.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pageobjects/register.page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pageobjects/shop.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/login.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/Base.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/specs/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,7 +49,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1kUsgMZEnUAQ9CLzk0x5VmWwDDK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,8 +64,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.18.4" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.19.5" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.10" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,7 +75,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -61,6 +89,8 @@
       <workItem from="1605766615595" duration="4067000" />
       <workItem from="1605771807341" duration="79000" />
       <workItem from="1605772270529" duration="3564000" />
+      <workItem from="1606865619396" duration="5692000" />
+      <workItem from="1606871995247" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1605771549654</created>
@@ -82,6 +112,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=".gitignore" />
     <MESSAGE value="allure report added" />
@@ -92,46 +134,61 @@
       <screen x="0" y="25" width="1920" height="966" />
     </state>
     <state x="673" y="314" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605776043144" />
+    <state x="698" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606871519401">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="698" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606871519401" />
     <state x="421" y="72" key="CommitChangelistDialog2" timestamp="1605776143991">
       <screen x="0" y="25" width="1920" height="966" />
     </state>
     <state x="421" y="72" key="CommitChangelistDialog2/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605776143991" />
     <state x="421" y="72" key="CommitChangelistDialog2/0.25.1920.968/1920.-13.1920.1055@0.25.1920.968" timestamp="1605771549499" />
-    <state x="836" y="441" width="540" height="198" key="Github.ShareDialog" timestamp="1605771191935">
+    <state x="836" y="441" width="540" height="198" key="Github.ShareDialog" timestamp="1606871670319">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="836" y="441" width="540" height="198" key="Github.ShareDialog/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605771191935" />
+    <state x="836" y="441" key="Github.ShareDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606871670319" />
     <state x="754" y="249" key="Github.UntrackedFilesDialog" timestamp="1605771200075">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="754" y="249" key="Github.UntrackedFilesDialog/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605771200074" />
-    <state width="1336" height="249" key="GridCell.Tab.0.bottom" timestamp="1605773086693">
-      <screen x="0" y="25" width="1920" height="966" />
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1606871685462">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1336" height="249" key="GridCell.Tab.0.bottom/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086693" />
-    <state width="1336" height="249" key="GridCell.Tab.0.center" timestamp="1605773086692">
-      <screen x="0" y="25" width="1920" height="966" />
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606871685462" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1606871685461">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1336" height="249" key="GridCell.Tab.0.center/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086692" />
-    <state width="1336" height="249" key="GridCell.Tab.0.left" timestamp="1605773086692">
-      <screen x="0" y="25" width="1920" height="966" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606871685461" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1606871685460">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1336" height="249" key="GridCell.Tab.0.left/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086692" />
-    <state width="1336" height="249" key="GridCell.Tab.0.right" timestamp="1605773086692">
-      <screen x="0" y="25" width="1920" height="966" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606871685460" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1606871685462">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1336" height="249" key="GridCell.Tab.0.right/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086692" />
-    <state x="469" y="176" key="SettingsEditor" timestamp="1605771092821">
+    <state width="1899" height="290" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606871685462" />
+    <state x="469" y="176" key="SettingsEditor" timestamp="1606866726435">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="176" key="SettingsEditor/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605771092821" />
+    <state x="469" y="176" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606866726435" />
     <state x="428" y="243" key="Vcs.Push.Dialog.v2" timestamp="1605771555588">
       <screen x="0" y="25" width="1920" height="968" />
     </state>
     <state x="428" y="243" key="Vcs.Push.Dialog.v2/0.25.1920.968/1920.-13.1920.1055@0.25.1920.968" timestamp="1605771555588" />
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1605768534128">
+    <state x="721" y="433" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606871622411">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="721" y="433" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606871622411" />
+    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1606866720008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605768534128" />
+    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606866720008" />
   </component>
 </project>

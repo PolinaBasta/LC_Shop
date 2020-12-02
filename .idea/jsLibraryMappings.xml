@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{template/node_modules}" />
-    <file url="PROJECT" libraries="{@types/app-module-path, @types/chai, @types/mocha, @types/node, @types/selenium-standalone, template/node_modules}" />
+    <file url="PROJECT" libraries="{@types/app-module-path, @types/chai, @types/eslint, @types/mocha, @types/selenium-standalone, @types/webpack-blocks__dev-server}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
