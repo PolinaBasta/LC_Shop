@@ -11,3 +11,4 @@ const randomUser = {
         shippingPostalCode: faker.address.zipCode()
 }
 module.exports = randomUser;
+
