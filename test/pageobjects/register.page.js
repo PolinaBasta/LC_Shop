@@ -2,6 +2,7 @@ import BasePage from "./Base.page";
 import randomUser from "../../data/random";
 
 class RegisterPage extends BasePage {
+
   get firstName() {
     return $("#user_login_firstName");
   }
@@ -29,7 +30,6 @@ class RegisterPage extends BasePage {
   get shopBtnNewUser() {
     return $(".item");
   }
-
   registerRandomUserAndClickShop() {
     this.firstName.setValue(randomUser.firstName);
     this.lastName.setValue(randomUser.lastName);
