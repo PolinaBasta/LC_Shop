@@ -13,15 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="Register LC 20711">
-      <change afterPath="$PROJECT_DIR$/data/expectedPurchase.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pageobjects/paymentCancel.page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pageobjects/purchase.page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/specs/purchase.js" afterDir="false" />
+    <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pageobjects/register.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/register.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pageobjects/shop.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/shop.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
@@ -97,7 +95,7 @@
       <workItem from="1607562200311" duration="1375000" />
       <workItem from="1607564124781" duration="689000" />
       <workItem from="1607565078503" duration="2261000" />
-      <workItem from="1607567470620" duration="4158000" />
+      <workItem from="1607567470620" duration="4790000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1605771549654</created>
@@ -127,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606880293538</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="KS_01 tests">
+      <created>1607573057451</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607573057451</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +154,8 @@
     <MESSAGE value=".gitignore" />
     <MESSAGE value="allure report added" />
     <MESSAGE value="Register LC 20711" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register LC 20711" />
+    <MESSAGE value="KS_01 tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="KS_01 tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
