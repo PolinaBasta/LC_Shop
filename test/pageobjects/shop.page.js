@@ -21,5 +21,6 @@ class ShopPage extends BasePage {
   get buyNowBtnQAAE() {
     return $$(".ant-btn.ant-btn-primary.mb-1rem")[3];
   }
+
 }
 export default new ShopPage();
