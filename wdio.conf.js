@@ -10,7 +10,7 @@ exports.config = {
       acceptInsecureCerts: true,
     },
   ],
-  logLevel: "info",
+  logLevel: 'silent',
   bail: 0,
   baseUrl: "https://stage.localcoding.us",
   waitforTimeout: 5000,

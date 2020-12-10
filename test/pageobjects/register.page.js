@@ -1,4 +1,4 @@
-import BasePage from "./Base.page";
+import BasePage from './Base.page';
 import randomUser from "../../data/random";
 
 class RegisterPage extends BasePage {
@@ -28,7 +28,7 @@ class RegisterPage extends BasePage {
     return $(".ant-btn-lg");
   }
   get shopBtnNewUser() {
-    return $(".item");
+    return $$(".item")[4];
   }
   registerRandomUserAndClickShop() {
     this.firstName.setValue(randomUser.firstName);
@@ -41,7 +41,7 @@ class RegisterPage extends BasePage {
     this.phone.waitForEnabled();
     this.phone.setValue(randomUser.phone);
     this.phoneSubmitBTN.click();
-    this.shopBtnNewUser.waitForExist();
+    browser.pause(1000);
     this.shopBtnNewUser.click();
   }
 }
