@@ -97,6 +97,5 @@ class PurchasePage extends BasePage {
     get receiptNumber() {
         return $$('.Content.Title-copy.Font.Font--title')[1];
     }
-
 }
 export default new PurchasePage();
