@@ -45,5 +45,4 @@ class RegisterPage extends BasePage {
     this.shopBtnNewUser.click();
   }
 }
-
 export default new RegisterPage();

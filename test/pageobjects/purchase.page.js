@@ -98,4 +98,5 @@ class PurchasePage extends BasePage {
         return $$('.Content.Title-copy.Font.Font--title')[1];
     }
 }
+
 export default new PurchasePage();

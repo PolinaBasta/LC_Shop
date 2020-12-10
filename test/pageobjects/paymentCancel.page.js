@@ -10,5 +10,4 @@ class PaymentCancelPage extends BasePage {
         return $('a[href="/shop"]');
     }
 }
-
 export default new PaymentCancelPage();
