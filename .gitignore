@@ -6,4 +6,5 @@ allure-report
 .idea
 open
 '.idea/workspace.xml'
+'.idea/jsLibraryMappings.xml'
 
