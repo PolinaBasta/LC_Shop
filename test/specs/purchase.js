@@ -40,10 +40,16 @@ describe("REGISTER",()=> {
         expect(PurchasePage.test.getText()).toEqual(exp.test);
     });
 
-    it('TC-4.9 Validate that links are clickable', function () {
-        PurchasePage.poweredBy.click();
-        PurchasePage.terms.click();
-        PurchasePage.privacy.click();
+    it('TC-4.9 Validate that link Powered by is clickable', function () {
+        expect(PurchasePage.poweredBy.isClickable()).toEqual(true);
+    });
+
+    it('TC-4.9.1 Validate that link terms is clickable', function () {
+        expect(PurchasePage.terms.isClickable()).toEqual(true);
+    });
+
+    it('TC-4.9.2 Validate that link privacy is clickable', function () {
+        expect(PurchasePage.privacy.isClickable()).toEqual(true);
     });
 
     it('TC-4.10 Validate that back arrow redirect to Cancel page and cancel the order', function () {
@@ -54,5 +60,69 @@ describe("REGISTER",()=> {
     it('TC-4.11 Validate that Go back shopping link is clickable and redirect to Shop page', function () {
         PaymentCancelPage.backToShopping.click();
         expect(ShopPage.productPage.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.12 Validate that a Header is present', function () {
+        browser.pause(2000);
+        ShopPage.buyNowBtnJSP.click();
+        browser.pause(2000);
+        PurchasePage.header.waitForDisplayed();
+        expect(PurchasePage.payWithCard.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.13 Validate the text content of the Header', function () {
+        expect(PurchasePage.payWithCard.getText()).toEqual(exp.payMethod);
+    });
+
+    it('TC-4.14 Validate the form to fill in is present', function () {
+        expect(PurchasePage.fillInForm.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.15 Validate Email label is present', function () {
+        expect(PurchasePage.emailLabel.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.16 Validate Email placeholder is present', function () {
+        expect(PurchasePage.emailPlaceholder.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.18 Validate Card information label is present', function () {
+        expect(PurchasePage.cardNumberLabel.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.19 Validate Card information placeholder is present', function () {
+        expect(PurchasePage.cardNumberPlaceholder.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.19.1 Validate Expiration date placeholder is present', function () {
+        expect(PurchasePage.cardExpiryPlaceholder.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.19.2 Validate Security code placeholder is present', function () {
+        expect(PurchasePage.cardCVCPlaceholder.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.20 Validate Name on card label is present', function () {
+        expect(PurchasePage.billingNameLabel.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.21 Validate Name on card placeholder is present', function () {
+        expect(PurchasePage.billingNamePlaceholder.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.22 Validate Country or region label is present', function () {
+        expect(PurchasePage.billingCountryLabel.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.23 Validate Country or region placeholder is present', function () {
+        expect(PurchasePage.billingCountryPlaceholder.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.23.1 Validate Postal code placeholder is present', function () {
+        expect(PurchasePage.billingPostalCodePlaceholder.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.24 Validate Pay button is present', function () {
+        expect(PurchasePage.payBtn.isDisplayed()).toEqual(true);
     });
 });

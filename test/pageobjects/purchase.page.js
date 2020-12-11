@@ -31,7 +31,7 @@ class PurchasePage extends BasePage {
     }
 
     get payWithCard() {
-        return $('.Text.Text-color--default.Text-fontSize--20.Text-fontWeight--500');
+        return $('.PaymentHeader');
     }
 
     get fillInForm() {
