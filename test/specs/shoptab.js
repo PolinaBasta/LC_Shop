@@ -6,14 +6,15 @@ describe('My Shop tab', () => {
     it('should login and validate Shop ', () => {
         LoginPage.open();
         LoginPage.login('3333@gmail.com','33333');
-        browser.pause(1000);
+        browser.pause(3000);
         expect(MainPage.shopOne.getText()).toEqual(LoginPage.Text);
     });
 
-    // it('1', () => {
-    //     LoginPage.logout();
-    //     expect(MainPage.shopOne.isDisplayed()).eq(false);
-    // });
+    it('1', () => {
+        LoginPage.logout();
+        browser.pause(2000);
+        expect(LoginPage.header.isDisplayed()).toEqual(true);
+    });
 
     it('2 ', () => {
         LoginPage.open();

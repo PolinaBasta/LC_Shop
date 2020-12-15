@@ -2,6 +2,10 @@ import BasePage from './Base.page';
 
 class LoginPage extends BasePage {
 
+  get header() {
+    return $$('.mb-4')[1]
+  }
+
   get loginEmail() {
     return $("#normal_login_email");
   }
