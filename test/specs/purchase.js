@@ -3,11 +3,14 @@ import RegisterPage from "../pageobjects/register.page";
 import ShopPage from "../pageobjects/shop.page";
 import PurchasePage from "../pageobjects/purchase.page";
 const exp = require ("../../data/expectedPurchase.json");
-import PaymentCancelPage from "../pageobjects/paymentCancel.page"
+import PaymentCancelPage from "../pageobjects/paymentCancel.page";
+import PaymentApprovedPage from "../pageobjects/paymentApproved.page"
+import paymentCredentials from "../../data/helpers";
 
 describe("REGISTER",()=> {
     before(() => {
         LoginPage.open();
+        LoginPage.createBTN.waitForDisplayed()
         LoginPage.createBTN.click()
         RegisterPage.registerRandomUserAndClickShop();
         browser.pause(2000);
@@ -124,5 +127,10 @@ describe("REGISTER",()=> {
 
     it('TC-4.24 Validate Pay button is present', function () {
         expect(PurchasePage.payBtn.isDisplayed()).toEqual(true);
+    });
+
+    it ('TC-4.26 Validate Pay button is enable when all required fields have valid inputs', function () {
+        PurchasePage.paymentCredentialsAndClickPayButton();
+        expect(PaymentApprovedPage.paymentApproved.isDisplayed()).toEqual(true);
     });
 });

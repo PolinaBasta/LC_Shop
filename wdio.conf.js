@@ -1,6 +1,6 @@
 exports.config = {
   runner: "local",
-  specs: ["./test/specs/shoptab.js"],
+  specs: ["./test/specs/**/*.js"],
   exclude: [],
   maxInstances: 5,
   capabilities: [
