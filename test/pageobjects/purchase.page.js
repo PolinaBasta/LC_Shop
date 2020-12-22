@@ -1,9 +1,10 @@
 import BasePage from './Base.page';
+import paymentCredentials from '../../data/helpers'
 
 class PurchasePage extends BasePage {
 
     get header() {
-        return $('.Header-BusinessLink-name.Text.Text-color--gray800.Text-fontSize--14.Text-fontWeight--500.Text--truncate');
+        return $('.Header-businessLink-name.Text.Text-color--gray800.Text-fontSize--14.Text-fontWeight--500.Text--truncate');
     }
 
     get productImage() {
@@ -11,11 +12,11 @@ class PurchasePage extends BasePage {
     }
 
     get backArrow() {
-        return $('.InlineSVG.Icon.Header-BusinessLink-arrow.mr2.Icon--sm');
+        return $('.InlineSVG.Icon.Header-backArrow.mr2.Icon--sm');
     }
 
     get test() {
-        return $('.Tag.Header-TestTag.Tag-orange');
+        return $('.Text.Text-color--orange.Text-fontSize--11.Text-fontWeight--700.Text-transform--uppercase');
     }
 
     get poweredBy() {
@@ -39,7 +40,7 @@ class PurchasePage extends BasePage {
     }
 
     get emailPlaceholder() {
-        return $$('.Input--empty')[0];
+        return $('#email');
     }
 
     get emailLabel() {
@@ -47,7 +48,7 @@ class PurchasePage extends BasePage {
     }
 
     get cardNumberPlaceholder() {
-        return $$('.Input--empty')[1];
+        return $('#cardNumber');
     }
 
     get cardNumberLabel() {
@@ -55,15 +56,15 @@ class PurchasePage extends BasePage {
     }
 
     get cardExpiryPlaceholder() {
-        return $$('.Input--empty')[2];
+        return $('#cardExpiry');
     }
 
     get cardCVCPlaceholder() {
-        return $$('.Input--empty')[3];
+        return $('#cardCvc');
     }
 
     get billingNamePlaceholder() {
-        return $$('.Input--empty')[4];
+        return $('#billingName');
     }
 
     get billingNameLabel() {
@@ -71,7 +72,7 @@ class PurchasePage extends BasePage {
     }
 
     get billingPostalCodePlaceholder() {
-        return $$('.Input--empty')[5];
+        return $('#billingPostalCode');
     }
 
     get billingCountryPlaceholder() {
@@ -79,7 +80,7 @@ class PurchasePage extends BasePage {
     }
 
     get billingCountryLabel() {
-        return $$('.Text.Text-color--gray600.Text-fontSize--13.Text-fontWeight--500')[4];
+        return $$('.Text.Text-color--gray600.Text-fontSize--13.Text-fontWeight--500')[3];
     }
 
     get payBtn() {
@@ -97,6 +98,15 @@ class PurchasePage extends BasePage {
     get receiptNumber() {
         return $$('.Content.Title-copy.Font.Font--title')[1];
     }
-}
 
+    paymentCredentialsAndClickPayButton() {
+        this.emailPlaceholder.setValue(paymentCredentials.email);
+        this.cardNumberPlaceholder.setValue(paymentCredentials.cardNumber);
+        this.cardExpiryPlaceholder.setValue(paymentCredentials.expirationDate);
+        this.cardCVCPlaceholder.setValue(paymentCredentials.securityCode);
+        this.billingNamePlaceholder.setValue(paymentCredentials.cardName)
+        this.billingPostalCodePlaceholder.setValue(paymentCredentials.postalCode);
+        this.payBtn.click();
+    }
+}
 export default new PurchasePage();
