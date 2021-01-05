@@ -4,8 +4,9 @@ import ShopPage from "../pageobjects/shop.page";
 import PurchasePage from "../pageobjects/purchase.page";
 const exp = require ("../../data/expectedPurchase.json");
 import PaymentCancelPage from "../pageobjects/paymentCancel.page";
-import PaymentApprovedPage from "../pageobjects/paymentApproved.page"
+import PaymentApprovedPage from "../pageobjects/paymentApproved.page";
 import paymentCredentials from "../../data/helpers";
+import PayStripePage from "../pageobjects/payStripe.page";
 
 describe("REGISTER",()=> {
     before(() => {
@@ -129,8 +130,45 @@ describe("REGISTER",()=> {
         expect(PurchasePage.payBtn.isDisplayed()).toEqual(true);
     });
 
-    it ('TC-4.26 Validate Pay button is enable when all required fields have valid inputs', function () {
+    it('TC-4.26 Validate Pay button is enabled when all required fields have valid inputs', function () {
         PurchasePage.paymentCredentialsAndClickPayButton();
-        expect(PaymentApprovedPage.paymentApproved.isDisplayed()).toEqual(true);
+        expect(PurchasePage.payBtn).toBeEnabled();
     });
+
+    it('TC-4.27 Validate that clicking on Pay button generates payment status', function (){
+        PurchasePage.payBtn.click();
+        expect(PaymentApprovedPage.paymentInfo.getText()).toEqual(exp.paymentInfo);
+    });
+
+    it('TC-4.29 Validate Payment Info link is present', function () {
+        expect(PaymentApprovedPage.paymentInfo.getText()).toEqual(exp.paymentInfo);
+    });
+
+    it('TC-4.30 Validate Payment Info link is clickable', function () {
+        expect(PaymentApprovedPage.paymentInfo).toBeClickable();
+    });
+
+    xit('TC-4.30.1 Validate Payment Info link redirects to Pay Stripe Page', function () {
+        PaymentApprovedPage.paymentInfo.click();
+        expect(PayStripePage.receipt.getText()).toEqual(exp.payStripeHeader);
+    });
+
+    it('TC-4.31 Validate confirmation form with fields on Payment success page is present', function () {
+        expect(PaymentApprovedPage.paymentInfoForm.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-4.32 Validate receipt information is present', function () {
+        expect(PaymentApprovedPage.receiptInfo.getText()).toEqual(exp.receiptInfo);
+    });
+
+    it('TC-4.33 Validate additional confirmation of receipt information is present', function () {
+        expect(PaymentApprovedPage.additionalReceiptInfo.getText()).toEqual(exp.additionalReceiptInfo);
+    });
+
+    it('TC-4.33.1 Validate additional confirmation of receipt information is available by link', function () {
+        PaymentApprovedPage.here.click();
+        browser.pause(2000);
+        expect(PayStripePage.receipt.getText()).toEqual(exp.payStripeHeader);
+    });
+
 });

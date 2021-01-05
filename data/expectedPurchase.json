@@ -2,5 +2,10 @@
     "header": "PASV-SHOP",
     "test": "TEST MODE",
     "paymentCancel": "Your payment to PASV.US was canceled",
-    "payMethod": "Pay with card"
+    "payMethod": "Pay with card",
+    "paymentApproved": "Your payment to PASV.US succeeded",
+    "paymentInfo": "Payment Info",
+    "receiptInfo": "Receipt of your payment will be emailed shortly to new@qa6.us",
+    "additionalReceiptInfo": "You can also temporarily view it here.",
+    "payStripeHeader": "Receipt from PASV-SHOP"
 }
