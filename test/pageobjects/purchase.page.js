@@ -106,7 +106,7 @@ class PurchasePage extends BasePage {
         this.cardCVCPlaceholder.setValue(paymentCredentials.securityCode);
         this.billingNamePlaceholder.setValue(paymentCredentials.cardName)
         this.billingPostalCodePlaceholder.setValue(paymentCredentials.postalCode);
-        this.payBtn.click();
+        //this.payBtn.click();
     }
 }
 export default new PurchasePage();
