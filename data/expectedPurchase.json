@@ -7,5 +7,10 @@
     "paymentInfo": "Payment Info",
     "receiptInfo": "Receipt of your payment will be emailed shortly to new@qa6.us",
     "additionalReceiptInfo": "You can also temporarily view it here.",
-    "payStripeHeader": "Receipt from PASV-SHOP"
+    "payStripeHeader": "Receipt from PASV-SHOP",
+    "contactUsLabel": "If you have any questions to us, please fill out and submit the following form.",
+    "contactUsName": "Name",
+    "contactUsEmail": "Email",
+    "contactUsCellPhone": "Cell phone number '17775551122' ",
+    "contactUsMessage": "Message"
 }
