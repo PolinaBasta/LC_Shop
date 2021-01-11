@@ -12,5 +12,7 @@
     "contactUsName": "Name",
     "contactUsEmail": "Email",
     "contactUsCellPhone": "Cell phone number '17775551122' ",
-    "contactUsMessage": "Message"
+    "contactUsMessage": "Message",
+    "amountPaid": "AMOUNT PAID",
+    "required": "REQUIRED"
 }

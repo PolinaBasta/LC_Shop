@@ -22,5 +22,4 @@ class ShopPage extends BasePage {
     return $$(".ant-btn.ant-btn-primary.mb-1rem")[3];
   }
 }
-
 export default new ShopPage();
