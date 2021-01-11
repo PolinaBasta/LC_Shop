@@ -6,9 +6,8 @@ const exp = require ("../../data/expectedPurchase.json");
 import PaymentCancelPage from "../pageobjects/paymentCancel.page";
 import PaymentApprovedPage from "../pageobjects/paymentApproved.page";
 import PayStripePage from "../pageobjects/payStripe.page";
-import ContactUsPage from "../pageobjects/contactUs.page";
 
-describe("REGISTER",()=> {
+describe("PURCHASE",()=> {
     before(() => {
         LoginPage.open();
         LoginPage.createBTN.waitForDisplayed()
@@ -149,10 +148,13 @@ describe("REGISTER",()=> {
     });
 
     xit('TC-4.30.1 Validate Payment Info link redirects to Pay Stripe Page', function () {
-        expect(PayStripePage.receipt.getText()).toEqual(exp.payStripeHeader);
+        PaymentApprovedPage.paymentInfo.click();
+        browser.pause(2000);
+        expect(PayStripePage.amountPaid.getText()).toEqual(exp.amountPaid);
     });
 
     it('TC-4.31 Validate confirmation form with fields on Payment success page is present', function () {
+        //browser.back();
         expect(PaymentApprovedPage.paymentInfoForm.isDisplayed()).toEqual(true);
     });
 
@@ -228,83 +230,5 @@ describe("REGISTER",()=> {
     // check redirect
     it('TC-4.38.1 Validate footer link for Receipt page is clickable: footer link 2', function () {
         expect(PayStripePage.footerLink2).toBeClickable();
-    });
-
-    it('TC-4.39 Validate footer links for Payment success page are present', function () {
-        browser.back();
-        expect(PaymentApprovedPage.footer.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.40 Validate that link for Payment success page is clickable: contact us', function () {
-        expect(PaymentApprovedPage.footerContactUs).toBeClickable();
-    });
-
-    it('TC-4.40.1 Validate that link for Payment success page is clickable: terms', function () {
-        expect(PaymentApprovedPage.footerTerms).toBeClickable();
-    });
-
-    it('TC-4.40.2 Validate that link for Payment success page is clickable: privacy', function () {
-        expect(PaymentApprovedPage.footerPrivacy).toBeClickable();
-    });
-
-    it('TC-4.41 Validate Header of Contact us page is present', function () {
-        PaymentApprovedPage.footerContactUs.click();
-        expect(ContactUsPage.contactUsHeader.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.42 Validate label of Contact us page is present', function () {
-        expect(ContactUsPage.contactUsLabel.getText()).toEqual(exp.contactUsLabel);
-    });
-
-    it('TC-4.43 Validate Contact us form field is present: name', function () {
-        expect(ContactUsPage.nameField.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.43.1 Validate Contact us form field is present: email', function () {
-        expect(ContactUsPage.emailField.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.43.2 Validate Contact us form field is present: cell phone', function () {
-        expect(ContactUsPage.cellPhoneField.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.43.3 Validate Contact us form field is present: prefix in cell phone field', function () {
-        expect(ContactUsPage.prefix.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.43.4 Validate Contact us form field is present: message', function () {
-        expect(ContactUsPage.messageField.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.44 Validate Contact us form placeholder is present: name', function () {
-        expect(ContactUsPage.nameField.getAttribute("placeholder")).toEqual(exp.contactUsName);
-    });
-
-    it('TC-4.44.1 Validate Contact us form placeholder is present: email', function () {
-        expect(ContactUsPage.emailField.getAttribute("placeholder")).toEqual(exp.contactUsEmail);
-    });
-
-    it('TC-4.44.2 Validate Contact us form placeholder is present: cell phone', function () {
-        expect(ContactUsPage.cellPhoneField.getAttribute("placeholder")).toEqual(exp.contactUsCellPhone);
-    });
-
-    it('TC-4.44.3 Validate Contact us form placeholder is present: message', function () {
-        expect(ContactUsPage.messageField.getAttribute("placeholder")).toEqual(exp.contactUsMessage);
-    });
-
-    it('TC-4.45 Validate Submit button is present', function () {
-        expect(ContactUsPage.submitBtn.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.45.1 Validate Reset button is present', function () {
-        expect(ContactUsPage.resetBtn.isDisplayed()).toEqual(true);
-    });
-
-    it('TC-4.46 Validate Submit button is clickable', function () {
-        expect(ContactUsPage.submitBtn).toBeClickable();
-    });
-
-    it('TC-4.46.1 Validate Reset button is clickable', function () {
-        expect(ContactUsPage.resetBtn).toBeClickable();
     });
 });

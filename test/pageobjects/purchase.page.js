@@ -99,6 +99,10 @@ class PurchasePage extends BasePage {
         return $$('.Content.Title-copy.Font.Font--title')[1];
     }
 
+    get required () {
+        return $('#required-email-fieldset');
+    }
+
     paymentCredentialsAndClickPayButton() {
         this.emailPlaceholder.setValue(paymentCredentials.email);
         this.cardNumberPlaceholder.setValue(paymentCredentials.cardNumber);

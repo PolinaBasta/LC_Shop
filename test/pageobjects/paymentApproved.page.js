@@ -25,21 +25,5 @@ class PaymentApprovedPage extends BasePage {
     get here () {
         return $('.mt-3rem p a');
     }
-
-    get footer () {
-        return $$('.container.mt-4')[1];
-    }
-
-    get footerContactUs () {
-        return $('[data-qa="footerContactUs"]');
-    }
-
-    get footerTerms () {
-        return $('[data-qa="footerTerms"]');
-    }
-
-    get footerPrivacy () {
-        return $$('[data-qa="footerPrivacy"]');
-    }
 }
 export default new PaymentApprovedPage();

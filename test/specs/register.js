@@ -7,9 +7,10 @@ describe("REGISTER",()=>{
      LoginPage.open();
      LoginPage.createBTN.click()
      RegisterPage.registerRandomUserAndClickShop();
- })
+ });
+
     it('Redirect to Shop Page', function () {
         ShopPage.productPage.waitForExist()
         expect(ShopPage.productPage.isDisplayed()).toEqual(true)
     });
-})
+});
