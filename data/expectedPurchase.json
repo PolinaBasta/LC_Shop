@@ -14,5 +14,9 @@
     "contactUsCellPhone": "Cell phone number '17775551122' ",
     "contactUsMessage": "Message",
     "amountPaid": "AMOUNT PAID",
-    "required": "REQUIRED"
+    "required": "REQUIRED",
+    "nameFieldError": "Your card number is incomplete.",
+    "expirationFieldError": "Your card's expiration date is incomplete.",
+    "presentExpDateError": "Your card's expiration year is in the past.",
+    "cvcError": "Your card's security code is incomplete."
 }
