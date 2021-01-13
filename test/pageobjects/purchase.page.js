@@ -103,6 +103,10 @@ class PurchasePage extends BasePage {
         return $('#required-email-fieldset');
     }
 
+    get errorField () {
+        return $$('.FieldError.Text.Text-color--red.Text-fontSize--13')[1];
+    }
+
     paymentCredentialsAndClickPayButton() {
         this.emailPlaceholder.setValue(paymentCredentials.email);
         this.cardNumberPlaceholder.setValue(paymentCredentials.cardNumber);
