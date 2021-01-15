@@ -1,4 +1,3 @@
-
 const paymentCredentials = {
     email: 'new@qa6.us',
     emailEmpty: '',
@@ -13,6 +12,8 @@ const paymentCredentials = {
     securityCode2Digits: '12',
     amexSecurityCode: '1234',
     cardName: 'Ivan Ivanov',
-    postalCode: '300096'
+    countryName: 'US',
+    postalCode: '30096',
+    postalCode4Digits: '3009'
 }
 module.exports = paymentCredentials;
