@@ -1,6 +1,4 @@
 import BasePage from './Base.page';
-import paymentCredentials from '../../data/helpers'
-
 class PurchasePage extends BasePage {
 
     get header() {
@@ -107,14 +105,34 @@ class PurchasePage extends BasePage {
         return $$('.FieldError.Text.Text-color--red.Text-fontSize--13')[1];
     }
 
-    paymentCredentialsAndClickPayButton() {
-        this.emailPlaceholder.setValue(paymentCredentials.email);
-        this.cardNumberPlaceholder.setValue(paymentCredentials.cardNumber);
-        this.cardExpiryPlaceholder.setValue(paymentCredentials.expirationDate);
-        this.cardCVCPlaceholder.setValue(paymentCredentials.securityCode);
-        this.billingNamePlaceholder.setValue(paymentCredentials.cardName)
-        this.billingPostalCodePlaceholder.setValue(paymentCredentials.postalCode);
-        //this.payBtn.click();
+    get nameFieldError () {
+        return $('#required-billingName-fieldset');
+    }
+
+    get countryAbrName () {
+        return $(".Select-source [value='RU']");
+    }
+
+    get errorZipCode () {
+        return $$('.FieldError.Text.Text-color--red.Text-fontSize--13')[3];
+    }
+
+    paymentCredentials(card) {
+        this.emailPlaceholder.setValue(card.email);
+        this.cardNumberPlaceholder.setValue(card.number);
+        this.cardExpiryPlaceholder.setValue(card.expDate);
+        this.cardCVCPlaceholder.setValue(card.cvc);
+        this.billingNamePlaceholder.setValue(card.name);
+        this.billingPostalCodePlaceholder.setValue(card.zip);
+    }
+
+    clearAllFieldsMethod() {
+        this.clearInput(this.emailPlaceholder);
+        this.clearInput(this.cardNumberPlaceholder);
+        this.clearInput(this.cardExpiryPlaceholder);
+        this.clearInput(this.cardCVCPlaceholder);
+        this.clearInput(this.billingNamePlaceholder);
+        this.clearInput(this.billingPostalCodePlaceholder);
     }
 }
 export default new PurchasePage();

@@ -18,5 +18,6 @@
     "nameFieldError": "Your card number is incomplete.",
     "expirationFieldError": "Your card's expiration date is incomplete.",
     "presentExpDateError": "Your card's expiration year is in the past.",
-    "cvcError": "Your card's security code is incomplete."
+    "cvcError": "Your card's security code is incomplete.",
+    "zipCodeError": "Your ZIP is incomplete."
 }

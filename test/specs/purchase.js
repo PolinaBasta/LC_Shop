@@ -6,6 +6,7 @@ const exp = require ("../../data/expectedPurchase.json");
 import PaymentCancelPage from "../pageobjects/paymentCancel.page";
 import PaymentApprovedPage from "../pageobjects/paymentApproved.page";
 import PayStripePage from "../pageobjects/payStripe.page";
+const card = require ("../../data/cards");
 
 describe("PURCHASE",()=> {
     before(() => {
@@ -130,7 +131,7 @@ describe("PURCHASE",()=> {
     });
 
     it('TC-4.26 Validate Pay button is enabled when all required fields have valid inputs', function () {
-        PurchasePage.paymentCredentialsAndClickPayButton();
+        PurchasePage.paymentCredentials(card.visa);
         expect(PurchasePage.payBtn).toBeEnabled();
     });
 
