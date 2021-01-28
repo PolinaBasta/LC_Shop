@@ -1,5 +1,4 @@
 import LoginPage from '../pageobjects/login.page';
-//const LoginPage = require('../pageobjects/login.page');
 import MainPage from '../pageobjects/main.page';
 
 describe('My Shop tab', () => {
@@ -59,6 +58,4 @@ describe('My Shop tab', () => {
         MainPage.Goal.click();
         expect(MainPage.Shop.getText()).toEqual(LoginPage.Text);
     });
-
-
 });
