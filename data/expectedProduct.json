@@ -1,0 +1,19 @@
+{
+  "adminUserLogin": "mi@gn.on",
+  "adminUserPassword": "Mignon",
+  "fullstackHeader": "Fullstack React Project",
+  "qaAutoEngHeader": "QA Automation Engineer",
+  "jSWTeacherHeader": "JavaScript с преподавателем",
+  "newProductName": "Yellow Mignon",
+  "newProductDescription": "Just goofying around while testing",
+  "newProductImageLink": "https://pbs.twimg.com/profile_images/378800000538561842/3e8954ac363c93c6175ba6be9201409d.jpeg",
+  "newProductPrice": "1000000",
+  "editDrawerHeader": "Edit Product",
+  "editDrawerErrorMsg": "Required",
+  "productHeaderFS": "Fullstack React Project",
+  "productPriceFS": "$999.00",
+  "productHeaderQA": "QA Automation Engineer",
+  "productPriceQA": "$3999.00",
+  "productHeaderJSteacher": "JavaScript с преподавателем",
+  "productPriceJSteacher": "$59.00"
+}
